@@ -18,7 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getUsers();
   }
-
   // define se um user será criado ou atualizado
   saveUser(form: NgForm) {
     if (this.user.id !== undefined) {
