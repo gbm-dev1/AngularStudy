@@ -4,17 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTableModule } from '@angular/material/table';
-
 import { HttpClientModule } from '@angular/common/http';
 
+import { SearchfilterPipe } from './searchfilter.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SearchfilterPipe],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

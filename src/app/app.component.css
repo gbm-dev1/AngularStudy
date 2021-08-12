@@ -1,21 +1,18 @@
 #table {
-  padding: 30px;
+  padding: 21px;
 }
 #table table {
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.405);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.63);
 }
-.container {
-  margin-top: 30px;
+.scrollbar {
+  position: relative;
+  height: 97%;
+  overflow: auto;
 }
-
-.add-user {
-  margin-bottom: 30px;
+.scroll-y {
+  display: block;
 }
-
-.list-user {
-  margin-bottom: 50px;
-}
-
-.btn-add-user {
-  margin-right: 10px;
+.form-rounded {
+  border-radius: 1rem;
+  width: 90%;
 }

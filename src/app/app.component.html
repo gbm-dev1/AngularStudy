@@ -1,23 +1,39 @@
-<div id="table">
-  <table class="table">
+<div id="table" class="scroll-y scrollbar">
+  <table class="table table-borderless table-dark table-responsive">
     <thead>
       <tr>
-        <th scope="col">Id</th>
+        <th scope="col">#</th>
         <th scope="col">Nome</th>
-        <th scope="col">Id Terminal</th>
-        <th scope="col"></th>
+        <th scope="col">Username</th>
+        <th scope="col">Status</th>
+        <th scope="col">Acesso</th>
+        <th scope="col">
+          <input
+            type="text"
+            id="search"
+            [(ngModel)]="searchValue"
+            class="form-control form-rounded"
+            placeholder="Pesquisar"
+          />
+        </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users">
+      <tr *ngFor="let user of users | slice: 0:35 | searchfilter: searchValue">
         <td>{{ user.id }}</td>
         <td>{{ user.name }}</td>
-        <td>{{ user.terminalIds }}</td>
+        <td>@{{ user.username }}</td>
+        <td>{{ user.type }}</td>
+        <td>
+          <span class="badge badge-pill badge-light">{{
+            user.terminalIds
+          }}</span>
+        </td>
         <td>
           <button
             type="button"
-            class="btn btn-warning btn-sm"
-            (click)="editUser(user)"
+            class="btn btn-light btn-sm ml-1"
+            (click)="deleteUser(user)"
           >
             Editar
           </button>

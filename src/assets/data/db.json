@@ -64,18 +64,6 @@
       "id": 7
     },
     {
-      "name": "TALLES SANTOS SILVA",
-      "email": null,
-      "type": "operational",
-      "terminalIds": ["25", "1", "6", "5"],
-      "onlyTrucks": false,
-      "enableTruckRelease": false,
-      "realm": null,
-      "username": "TALLESSS",
-      "emailVerified": null,
-      "id": 12
-    },
-    {
       "name": "ANDREI KAUAI ANACLETO DOS SANTOS",
       "email": null,
       "type": "operational",
